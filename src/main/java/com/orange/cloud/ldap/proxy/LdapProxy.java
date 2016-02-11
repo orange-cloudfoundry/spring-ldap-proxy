@@ -97,8 +97,8 @@ public class LdapProxy {
         try {
             listener = new LDAPListener(this.ldapProxyHost, Integer.parseInt(this.ldapProxyPort), connectionHandler, options);
             System.out.println("Start listening on " + this.ldapProxyHost + ":" + this.ldapProxyPort);
-            System.out.println("Press any key to stop the server...");
-            System.in.read();
+            while (true) {
+            }
         } catch (final IOException e) {
             System.out.println("Error listening on " + this.ldapProxyHost + ":" + this.ldapProxyPort);
             e.printStackTrace();
